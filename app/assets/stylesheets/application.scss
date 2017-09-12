@@ -1,2 +1,17 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+
+body {
+ background: #333333;
+ color: #fff;
+}
+
+.navbar {
+  border-color: #fff;
+  border: 5;
+}
+
+.navbar-brand {
+  color: #fff;
+}

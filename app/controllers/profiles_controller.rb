@@ -1,5 +1,5 @@
 class ProfilesController < ApplicationController
-    before_action :set_profile, only: [:edit, :update, :show]
+    before_action :set_profile, only: [:edit, :update]
     before_action :authenticate_user!
 
     def new
@@ -37,7 +37,7 @@ class ProfilesController < ApplicationController
       end
 
       def profile_params
-        params.require(:profile).permit(:first_name, :last_name, :bio)
+        params.require(:profile).permit(:first_name, :last_name, :user_id)
       end
 
 end

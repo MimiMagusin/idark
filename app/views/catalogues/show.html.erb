@@ -3,7 +3,9 @@
 <table>
 <% @products.each do |product| %>
 <tr>
+  <td><%= image_tag product.image, style: 'width: 100px'%>
   <td><%= product.name %></td>
+  <td><%= link_to "View", catalogue_product_path(product.catalogue_id, product)%></td>
 </tr>
 <% end %>
 

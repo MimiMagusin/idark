@@ -3,6 +3,7 @@ class ProductsController < ApplicationController
 
   def show
     @product = Product.find(params[:id])
+    @catalogue = Catalogue.find(params[:catalogue_id])
   end
 
   private

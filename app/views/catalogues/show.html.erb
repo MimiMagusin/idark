@@ -1,12 +1,16 @@
 <h1>Catalogue</h1>
 
-<table>
-<% @products.each do |product| %>
-<tr>
-  <td><%= image_tag product.image, style: 'width: 100px'%>
-  <td><%= product.name %></td>
-  <td><%= link_to "View", catalogue_product_path(product.catalogue_id, product)%></td>
-</tr>
-<% end %>
+<br />
 
-</table>
+<% @products.each do |product| %>
+
+  <div class="card" style="width: 20rem; margin: 2rem;">
+    <%= image_tag product.image, style: 'width: 100px', class: "card-img-top"%>
+    <div class="card-block">
+      <h4 class="card-title"><%= product.name %></h4>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      <%= link_to "View", catalogue_product_path(product.catalogue_id, product), class: "btn btn-primary" %>
+    </div>
+  </div>
+
+<% end %>

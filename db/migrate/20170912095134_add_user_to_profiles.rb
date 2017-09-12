@@ -1,5 +1,5 @@
-class AddUserToProfile < ActiveRecord::Migration[5.1]
+class AddUserToProfiles < ActiveRecord::Migration[5.1]
   def change
-    add_reference :profile, :user, foreign_key: true
+    add_reference :profiles, :user, foreign_key: true
   end
 end

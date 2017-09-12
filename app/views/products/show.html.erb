@@ -2,7 +2,7 @@
 <div class="container">
   <h2> <%= @product.name %></h2>
 
-  <p><%= @product.image %></p>
+  <p><%= image_tag @product.image, style: 'width: 100px' %></p>
 
   <p><%= @product.description %></p>
 

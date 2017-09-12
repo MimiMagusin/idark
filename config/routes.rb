@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   root to: 'catalogues#show'
 
   resources :users, only: [:show]
-  resources :profiles
+  resources :profiles, except: [:destroy]
 
   resources :catalogues, only: [:show] do
     resources :products, only: [:show]

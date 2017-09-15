@@ -9,10 +9,11 @@
       <div class="card-img-top">
         <%= image_tag product.image, style: 'width: 100px' %>
       </div>
-      <div class="card-block">
+      <div class="card-block col-md-6">
         <h4 class="card-title"><%= product.name %></h4>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <p class="card-text"><%= product.description %></p>
         <%= link_to "View", catalogue_product_path(product.catalogue_id, product), class: "btn btn-primary" %>
+        <p class="price"><%= product.price %></p>
       </div>
   </div>
 </div>

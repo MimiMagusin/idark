@@ -7,6 +7,14 @@ body {
  color: #fff;
 }
 
+.form-group {
+ color: #000;
+}
+
+label {
+  color: #fff;
+}
+
 .navbar {
   border-color: #fff;
   border: 5;
@@ -14,4 +22,17 @@ body {
 
 .navbar-brand {
   color: #fff;
+}
+
+.card {
+  display: flex;
+}
+
+.card-img-top {
+  padding: 10px;
+  margin: 10px;
+}
+
+.card-block {
+  padding: 10px;
 }

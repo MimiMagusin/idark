@@ -3,8 +3,8 @@ class ShoppingCart
 
   def initialize(session = {})
     @session = session
-    @session.lines = session[:ShoppingCart] || []
-    @order_lines = session_lines.map do |line|
+    @session_lines = session[:ShoppingCart] || []
+    @order_lines = @session_lines.map do |line|
       Orderline.from.hash(line)
     end
   end
@@ -36,9 +36,9 @@ class ShoppingCart
 
     def to_hash
       {
-        product_id: @product_id
-        amount: @amount
-        added_at: @added_at
+        product_id: @product_id,
+        amount: @amount,
+        added_at: @added_at,
         price: @price
       }
     end

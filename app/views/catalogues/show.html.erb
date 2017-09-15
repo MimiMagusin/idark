@@ -1,21 +1,41 @@
-<h1>Catalogue</h1>
-
-<br />
-
-<% @products.each do |product| %>
+<!-- <nav id='navbar' class="search-bar">
+  <form class="form-inline">
+    <input class="form-control mr-sm-2" type="text" placeholder="Search">
+    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+  </form>
+</nav> -->
 
 <div class="container">
-  <div class="card card-outline-secondary">
-      <div class="card-img-top">
-        <%= image_tag product.image, style: 'width: 100px' %>
-      </div>
-      <div class="card-block col-md-6">
-        <h4 class="card-title"><%= product.name %></h4>
-        <p class="card-text"><%= product.description %></p>
-        <%= link_to "View", catalogue_product_path(product.catalogue_id, product), class: "btn btn-primary" %>
-        <p class="price"><%= product.price %></p>
-      </div>
-  </div>
-</div>
+    <div id='navbar' class="search-bar">
+      <div class = "form-inline my-2 my-lg-0">
+        <%= form_tag(root_path, method: :get) do %>
+          <div class = "form-group mr-sm-2">
+            <%= text_field_tag :term %>
+          </div>
+          <%= submit_tag 'Search', class: "btn btn-outline-success my-2 my-sm-0" %>
+          <% end %>
+    </div>
 
-<% end %>
+
+  <h1>Catalogue</h1>
+
+  <br />
+
+  <% @products.each do |product| %>
+
+  <div class="container">
+    <div class="card card-outline-secondary">
+        <div class="card-img-top">
+          <%= image_tag product.image, style: 'width: 100px' %>
+        </div>
+        <div class="card-block col-md-6">
+          <h4 class="card-title"><%= product.name %></h4>
+          <p class="card-text"><%= product.description %></p>
+          <%= link_to "View", catalogue_product_path(product.catalogue_id, product), class: "btn btn-primary" %>
+          <p class="price"><%= product.price %></p>
+        </div>
+    </div>
+  </div>
+
+  <% end %>
+</div>

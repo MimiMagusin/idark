@@ -7,7 +7,7 @@ class ProfilesController < ApplicationController
     end
 
     def show
-      
+
     end
 
     def create
@@ -37,7 +37,7 @@ class ProfilesController < ApplicationController
       end
 
       def profile_params
-        params.require(:profile).permit(:first_name, :last_name, :user_id)
+        params.require(:profile).permit(:first_name, :last_name, :age, :city, :address, :postal_code, :billing_info, :user_id)
       end
 
 end

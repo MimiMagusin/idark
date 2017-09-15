@@ -15,13 +15,12 @@ label {
   color: #fff;
 }
 
-.navbar {
-  border-color: #fff;
-  border: 5;
-}
-
 .navbar-brand {
   color: #fff;
+}
+
+.search-bar {
+  display: inline-block;
 }
 
 .card {
@@ -42,4 +41,8 @@ label {
   display: inline-block;
   margin-left: 400px;
   text-align-last: right;
+}
+
+.search-bar {
+  display: flex-end;
 }

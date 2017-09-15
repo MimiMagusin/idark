@@ -1,5 +1,5 @@
 class ApplicationController < ActionController::Base
-  before_action: initiate_cart
+  before_action :initiate_cart
   protect_from_forgery with: :exception
 
   def initiate_cart

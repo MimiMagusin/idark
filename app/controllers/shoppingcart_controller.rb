@@ -6,6 +6,7 @@ class ShoppingcartController < ApplicationController
   end
 
   def create
+    
 
   end
 

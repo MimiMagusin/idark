@@ -11,4 +11,7 @@ Rails.application.routes.draw do
     resources :products, only: [:show]
   end
 
+  namespace :api do
+    resources :shoppingcart, only: [:index]
+  end
 end

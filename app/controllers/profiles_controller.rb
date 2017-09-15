@@ -7,7 +7,7 @@ class ProfilesController < ApplicationController
     end
 
     def show
-
+      
     end
 
     def create

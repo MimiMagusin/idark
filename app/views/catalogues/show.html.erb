@@ -25,6 +25,7 @@
           <h4 class="card-title"><%= product.name %></h4>
           <p class="card-text"><%= product.description %></p>
           <%= link_to "View", catalogue_product_path(product.catalogue_id, product), class: "btn btn-primary" %>
+          <%= link_to "Buy", root_path , data: { confirm: "No. You are just too young. Accept it." }, class: "btn btn-success" %>
           <p class="price"><%= product.price %></p>
         </div>
     </div>
